@@ -1,0 +1,13 @@
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium; 
+} 
+#titulo-principal {
+     text-align: center;
+}
+.subtitulo{
+    color: brown; 
+    font-weight: bold;
+}
+
+li a { text-decoration: none; }

@@ -1,0 +1,34 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+.hero_banner{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;   /* Centra horizontalmente */
+}
+.hero-banner h1 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: clamp(32px, 7vw, 64px);  /* fluido entre 32–64px */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.hero-banner p {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin-top: 14px;
+  max-width: 60ch; /* legibilidad */
+  line-height: 1.5;
+  opacity: 0.95;
+}
+@media (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 32px; /* asegura que no quede desproporcionado */
+  }
+  .hero-banner p {
+    font-size: 16px;
+  }
+}

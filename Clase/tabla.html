@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>
+            La Tabla 
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Hora</th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miércoles</th>
+            </tr>
+        </thead>
+        <!--Scope sirve para que funcione en web, se distingue entre columna y fila.  -->
+        <!-- El scope identifica si la celda encabeza una fila, una columna o un grupo de filas o columnas-->
+        <tbody>
+            <tr>
+                <th scope="row">Matematica</th>
+                <td>9:00</td>
+                <td>---</td>
+                <td>11:00</td>
+                <td>---</td>
+            </tr>
+            <tr>
+                <th scope="row">Fisica</th>
+                <td>---</td>
+                <td>10:00</td>
+                <td>---</td>
+                <td>12:00</td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="/enviar-contacto" method="POST">
+        <div>
+            <label for="nombreUsuario">Nombre:</label>
+            <input type="text" id="nombreUsuario" name="nombre" required autofocus>
+        </div>
+        <div>
+            <label for="emailUsuario">Email:</label>
+            <input type="email" id="emailUsuario" name="email" required>
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password">
+        </div>
+        <div>
+            <label for="ocupacion">Ocupacion</label>
+            <select id="ocupacion" name="ocupacion">
+                <option value="estudiante">Estudiante</option>
+                <option value="profesor">Profesor</option>
+                <option value="otro">Otro</option>  
+            </select> 
+        </div>
+    </form>
+    <fieldset>
+        <legend>Tipo de Asistencia</legend>
+        <div>
+            <input for="radio" name="Asistencia" id="presencial">
+            <label for="presencial">Presencial</label>  
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" id="presencial" name="Asistencia" value="presencial">
+            <label for="presencial">Permite grabar sesiones</label>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </fieldset>
+</body>
+</html>

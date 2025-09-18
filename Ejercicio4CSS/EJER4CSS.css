@@ -1,0 +1,15 @@
+.galeria{
+    flex-direction: column;
+    width: 95%;
+}
+.tarjeta-foto {
+  width: 95%;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row; /* Cuando la pantalla mida 768px o más, las cajas se ponen en fila */
+  }
+}

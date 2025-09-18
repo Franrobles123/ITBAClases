@@ -1,0 +1,20 @@
+"""# Hermanos Jota - Inventario (ejemplo TXT para fs de Node.js)
+# Codificación: UTF-8. Separador: punto y coma (;)
+
+ID;Producto;Categoría;Material;PrecioARS;Stock
+001;Aparador Uspallata;Guardado;Nogal macizo FSC;850000;5
+002;Biblioteca Recoleta;Estantería;Acero + Roble;620000;3
+003;Butaca Mendoza;Asiento;Guatambú + Bouclé;410000;8
+004;Sillón Copacabana;Asiento;Cuero curtido vegetal;980000;2
+005;Mesa de Centro Araucaria;Mesa;Mármol Patagonia + Nogal;730000;4
+006;Mesa de Noche Aconcagua;Mesa;Roble macizo FSC;290000;10
+007;Cama Neuquén;Dormitorio;Roble + Lino;1_250_000;1
+008;Sofá Patagonia;Asiento;Eucalipto FSC + Lino;1_380_000;2
+009;Mesa Comedor Pampa;Mesa;Roble macizo FSC;1_150_000;2
+010;Sillas Córdoba (x4);Asiento;Contrachapado Nogal + Acero;520000;6
+
+# Notas:
+# - Las líneas que empiezan con # son comentarios.
+# - Usamos ; como separador para simplificar el parseo.
+# - Guardá este archivo como 'inventario.txt' en la misma carpeta que tu script de Node.js.
+"""

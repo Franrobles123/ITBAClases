@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+#titulo-principal {
+     text-align: center;
+}
+.galeria {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 24px;
+  align-items: stretch;     /* todas las tarjetas misma altura */
+}
+
+.tarjeta-foto {
+  width: 95%;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Igualar tamaño de imágenes */
+.tarjeta-foto img {
+  width: 100%;
+  aspect-ratio: 16 / 9;     /* mismo formato para todas */
+  object-fit: cover;        /* recorta sin deformar */
+  display: block;
+  border-radius: 6px;
+}
+
+.tarjeta-foto p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    flex-direction: row;
+    width: 95%;
+  }
+
+  .tarjeta-foto {
+    width: 31%;
+  }
+}

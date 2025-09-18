@@ -1,0 +1,4 @@
+'producto 1: Silla'
+'producto 2: Mesa'
+'producto 3: Tele'
+'producto 4: Auto'

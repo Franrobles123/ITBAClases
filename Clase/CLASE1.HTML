@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+  <header>
+    <img src="logo.png" alt="Logo del Blog">
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/recetas">Recetas</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main>
+    <h1>Las Mejores Recetas de Verano</h1>
+    <article>
+      <h2>Ensalada Mediterránea</h2>
+      <p>Descripción de la ensalada...</p>
+      <section>
+        <h3>Ingredientes</h3>
+        <p>Lista de ingredientes...</p>
+      </section>
+      <section>
+        <h3>Preparación</h3>
+        <p>Pasos de la preparación...</p>
+      </section>
+      <img src="gatito.jpg" alt="Un gatito jugando con un ovillo" width="300">
+        <p>Escucha nuestro podcast:</p>
+        <audio src="/podcasts/episodio-1.mp3" controls>
+        Tu navegador no soporta el elemento de audio.
+        </audio>
+        <section>
+        <video src="/videos/tutorial.mp4" width="400" controls>
+        Tu navegador no soporta el elemento de video.
+        </video>
+        </section>
+        <table>
+        <thead>
+            <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Teclado Mecánico</td>
+            <td>$120</td>
+            <td>En Stock</td>
+            </tr>
+            <tr>
+            <td>Mouse Gamer</td>
+            <td>$75</td>
+            <td>Agotado</td>
+            </tr>
+        </tbody>
+        </table>
+
+    </article>
+    <h4>Ingredientes para una Ensalada:</h4>
+    <ul>
+    <li>Lechuga</li>
+    <li>Tomate</li>
+    <li>Pepino</li>
+    <li>Queso Feta</li>
+    </ul>
+    <h4>Instrucciones para Desplegar un Proyecto:</h4>
+    <ol>
+    <li>Escribir el código</li>
+    <li>Probar la aplicación</li>
+    <li>Subir a un repositorio de Git</li>
+    <li>Conectar el repositorio a un servicio de hosting</li>
+    </ol>
+    <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language. El lenguaje para estructurar el contenido de la web.</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets. El lenguaje para diseñar y estilizar el contenido.</dd>
+    </dl>
+    <a href="https://developer.mozilla.org/">Documentación de MDN</a><br>
+    <a href="/paginas/contacto.html">Contacta con nosotros</a><br>
+    <a href="#seccion-ofertas">Ir a las ofertas</a><br>
+    <a href="https://externo.com" target="_blank" rel="noopener noreferrer">
+    Este sitio se abrirá en una nueva pestaña
+    </a>
+    <table border="1" style="width:100%; border-collapse: collapse; text-align: center;">
+    
+    <caption>Horario de Clases - 5º Año</caption>
+    
+    <thead>
+        <tr>
+        <th scope="col">Hora</th>
+        <th scope="col">Lunes</th>
+        <th scope="col">Martes</th>
+        <th scope="col">Miércoles</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+        <th scope="row">08:00 - 09:00</th>
+        <td>Matemáticas</td>
+        <td>Historia</td>
+        <td>Física</td>
+        </tr>
+        <tr>
+        <th scope="row">09:00 - 10:00</th>
+        <td>Matemáticas</td>
+        <td>Química</td>
+        <td>Física</td>
+        </tr>
+        <tr>
+        <th scope="row">10:00 - 10:30</th>
+        <td colspan="3">Recreo</td>
+        </tr>
+        <tr>
+        <th scope="row">10:30 - 11:30</th>
+        <td rowspan="2">Laboratorio de Programación</td>
+        <td>Lengua</td>
+        <td>Arte</td>
+        </tr>
+        <tr>
+        <th scope="row">11:30 - 12:30</th>
+        <td>Geografía</td>
+        <td>Música</td>
+        </tr>
+    </tbody>
+    
+    
+    <tfoot>
+        <tr>
+        <td colspan="4">El horario puede estar sujeto a cambios.</td>
+        </tr>
+    </tfoot>
+    
+    
+    </table>
+    <form action="/enviar-contacto" method="POST">
+      <div>
+          <label for="nombreUsuario">Nombre:</label>
+          <input type="text" id="nombreUsuario" name="nombre" required>
+      </div>
+      <div>
+          <label for="emailUsuario">Email:</label>
+          <input type="email" id="emailUsuario" name="email" required>
+      </div>
+      <div>
+          <label for="mensajeUsuario">Mensaje:</label>
+          <textarea id="mensajeUsuario" name="mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <h2 id="seccion-ofertas">Ofertas Especiales</h2>
+    <aside>
+      <h3>Consejos del Chef</h3>
+      <p>Para un extra de sabor, añade queso feta.</p>
+    </aside>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2025 Blog de Cocina. Todos los derechos reservados.</p>
+  </footer>
+ 
+</body>
+</html>

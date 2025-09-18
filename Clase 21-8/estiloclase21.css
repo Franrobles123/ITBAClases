@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+.padre-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
+
+}
+.hijo-content{
+    border: 2px solid black;
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    .padre-content {
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        
+        grid-template-rows: 250px 250px 250px;
+    }
+}
+.hero {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*grid-template-columns: repeat(4, 250px);*/
