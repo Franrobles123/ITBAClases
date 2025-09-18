@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mueblería Jota</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f7f7f7;
+    }
+    h1, h2 { color: #333; }
+    #lista {
+      list-style: none;
+      padding: 0;
+    }
+    #lista li {
+      background: #fff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mueblería Jota 🪑</h1>
+
+  <h2>Lista de productos</h2>
+  <ul id="lista"></ul>
+
+  <h2>Agregar producto</h2>
+  <input id="nombre" placeholder="Nombre" />
+  <input id="precio" placeholder="Precio" type="number" />
+  <button id="agregar">Agregar</button>
+
+  <script>
+    const API_URL = "http://localhost:4000/api/productos";
+
+    // Cargar productos
+    async function cargarProductos() {
+      try {
+        const res = await fetch(API_URL);
+        const data = await res.json();
+        const lista = document.getElementById("lista");
+        lista.innerHTML = "";
+        data.forEach(p => {
+          const li = document.createElement("li");
+          li.textContent = `${p.nombre} - $${p.precio}`;
+          lista.appendChild(li);
+        });
+      } catch (err) {
+        console.error("Error al cargar productos", err);
+      }
+    }
+
+    // Agregar producto
+    document.getElementById("agregar").addEventListener("click", async () => {
+      const nombre = document.getElementById("nombre").value;
+      const precio = document.getElementById("precio").value;
+
+      if (!nombre || !precio) {
+        alert("Completa nombre y precio");
+        return;
+      }
+
+      await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, precio })
+      });
+
+      document.getElementById("nombre").value = "";
+      document.getElementById("precio").value = "";
+
+      cargarProductos(); // 🔄 refresca la lista
+    });
+
+    // Inicial
+    cargarProductos();
+  </script>
+</body>
+</html>
