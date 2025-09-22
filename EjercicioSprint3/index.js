@@ -14,6 +14,8 @@ app.use(express.urlencoded({extended: true}));
 // Configurar puerto (desde .env o 3000 por defecto)
 const port = process.env.PORT || 3000;
 
+const {loggerMiddleware} = require("./logger")
+app.use(loggerMiddleware);
 // Middlewares
 app.use(cors());
 app.use(express.json()); // Para poder leer JSON en peticiones POST
@@ -81,6 +83,8 @@ app.post("/api/usuarios/", (res, req) =>{
     usuarios.push(usuario);
     res.send(201).json(usuario);
 });
+
+app.use("/web", express.static("public"))
 
 
 app.use((req, res)=> {
